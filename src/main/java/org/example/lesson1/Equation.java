@@ -7,7 +7,7 @@ import java.util.List;
 import java.lang.*;
 class Equation {
     public static String getSolution(String str) {
-        // Читаем выражение из файла input.txt
+        // Читаем выражение из файла input1.txt
         String inputString = getDataFromFile(str);
         System.out.println("Given the equation: " + inputString);
 

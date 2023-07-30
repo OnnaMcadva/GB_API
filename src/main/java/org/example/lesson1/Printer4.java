@@ -6,7 +6,7 @@ public class Printer4{
         String file = "";
 
         if (args.length == 0) {
-            file = "input.txt";
+            file = "input1.txt";
         }
         else{
             file = args[0];
