@@ -2,7 +2,6 @@ package org.example.lesson6.Notebook;
 
 import java.util.*;
 import java.lang.*;
-
 //import static org.example.lesson6.Notebook.Filter.all;
 public class NoteCatalog {
     static Random randNumber = new Random();
@@ -15,10 +14,11 @@ public class NoteCatalog {
     static String[] arrColor = {"black", "white", "red", "silver", "gold"};
     static int scroll2 = 2;
     static int scroll5 = 5;
+    static int totalNotebook = 3;
 
     public static Set<Notebook> fill() {
         Set<Notebook> notebookSet = new HashSet<>();
-        for (int i = 0; i < 15; i++) {
+        for (int i = 1; i <= totalNotebook; i++) {
             notebookSet.add(new Notebook(Integer.parseInt(arrRam[randNumber.nextInt(scroll5)]),
                     arrDrive[randNumber.nextInt(scroll2)],
                     Double.parseDouble(arrScreenSize[randNumber.nextInt(scroll5)]),
@@ -32,8 +32,7 @@ public class NoteCatalog {
         }
         return notebookSet;
     }
-
-    public static HashMap<String, String[]> arrParams = new HashMap<>();
+    /* public static HashMap<String, String[]> arrParams = new HashMap<>();
 
     public static HashMap<String, String[]> getArrParams() {
         arrParams.put("Оперативная память", arrRam);
@@ -44,4 +43,7 @@ public class NoteCatalog {
         arrParams.put("Цвет", arrColor);
         return arrParams;
     }
+
+     */
+
 }

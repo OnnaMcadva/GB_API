@@ -93,4 +93,6 @@ public class Notebook {
     public int hashCode() {
         return Objects.hash(ram, drive, screenSize, brand, os, color);
     }
+
+
 }
