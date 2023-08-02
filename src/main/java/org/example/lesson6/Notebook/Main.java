@@ -1,5 +1,6 @@
 package org.example.lesson6.Notebook;
 
+
 import java.util.*;
 import java.lang.*;
 
@@ -22,6 +23,7 @@ public class Main {
                 Set<Notebook> notebooks = NoteCatalog.fill();
                 break;
             case ("2"):
+                // ***** notebookFromFilter = NoteCustomer.???();
                 System.out.println("Мы пока не научились писать код для фильтров... Но в скором времени напишем что-то подобное)))");
                 break;
             default:
@@ -30,5 +32,3 @@ public class Main {
         }
     }
 }
-
-
