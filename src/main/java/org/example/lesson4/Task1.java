@@ -29,3 +29,20 @@ public class Task1 {
         System.out.println("integerLinkedList.indexOf(7) = " + integerLinkedList.indexOf(7));
     }
 }
+/*
+206. Reverse Linked List
+https://leetcode.com/problems/reverse-linked-list/description/
+ class Solution {
+public ListNode reverseList(ListNode head) {
+ListNode pred = null;
+ListNode current = head;
+while(current!=null){
+ListNode temp = current.next;
+current.next = pred;
+pred = current;
+current = temp;
+}
+return pred;
+}
+}
+ */
