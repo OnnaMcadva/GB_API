@@ -31,8 +31,7 @@ public class Task2 {
 // В противном случае (false).
 /*
 public static void main(String[] args) {
-//2)Определить, есть ли в массиве дубликаты, если найден хоть один, вывести на экран (true),
-//В противном случае (false).
+
 Map<Integer, Integer> dubMap = new HashMap<>();
 ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 1, 2));
 
