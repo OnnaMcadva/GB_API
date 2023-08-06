@@ -20,6 +20,7 @@ public class NoteCustomer {
         int x = JOptionPane.showOptionDialog(null, "Выбрать из предложенных",
                 "Операционнaя система",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, icon, options, options[1]);
+        if (x == -1) {return null;}
         String ramInput = null;
         String screenSizeInput = null;
         boolean noBlind = false;
@@ -31,7 +32,7 @@ public class NoteCustomer {
                 counter++;
                 if (counter == 2) {
                     JOptionPane.showMessageDialog(null, "Чё такой упорный?", "Не будет тебе ноутбука", JOptionPane.INFORMATION_MESSAGE, iconCat);
-                    break;
+                    return null;
                 }
             } else {
                 noBlind = true;
@@ -46,7 +47,7 @@ public class NoteCustomer {
                 counter++;
                 if (counter == 2) {
                     JOptionPane.showMessageDialog(null, "Я же говорил!", "Не будет тебе ноутбука", JOptionPane.INFORMATION_MESSAGE, iconCat);
-                    break;
+                    return null;
                 }
             } else {
                 noBlind = true;
@@ -58,7 +59,9 @@ public class NoteCustomer {
 
         Set<Notebook> notebookFromFilter = new HashSet<>();
         for (Notebook notebook : notebooks) {
-            if (ram <= notebook.getRam() && options[x].equalsIgnoreCase(notebook.getOs()) && screenSize <= notebook.getScreenSize()) {
+            if (ram <= notebook.getRam()
+                    && options[x].equalsIgnoreCase(notebook.getOs())
+                    && screenSize <= notebook.getScreenSize()) {
                 notebookFromFilter.add(new Notebook(notebook.getRam(),
                         notebook.getDrive(),
                         notebook.getScreenSize(),

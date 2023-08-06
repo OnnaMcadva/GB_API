@@ -11,6 +11,7 @@ public class Main {
         ImageIcon icon = new ImageIcon("src/images/notebook.png");
         String n = (String)JOptionPane.showInputDialog(null, "Выберите одну из возможностей",
                 "Добро пожаловать в магазин ноутбуков", JOptionPane.QUESTION_MESSAGE, icon, choice, choice[1]);
+        if (n == null) {return;}
 
         Set<Notebook> notebooks = NoteCatalog.fill();
 
@@ -25,6 +26,7 @@ public class Main {
                 break;
             case ("задать критерии поиска"):
                 Set<Notebook> notebookFromFilter = NoteCustomer.filter(notebooks);
+                if (notebookFromFilter == null) {return;}
                 int counter = notebookFromFilter.size();
                 if (counter == 0) {
                     System.out.println("Не найдено ни одного ноутбука");
