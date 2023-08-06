@@ -1,6 +1,5 @@
 package org.example.lesson6.Notebook;
 
-
 import java.util.*;
 import java.lang.*;
 
@@ -14,8 +13,12 @@ public class NoteCatalog {
     static String[] arrColor = {"black", "white", "red", "silver", "gold"};
     static int scroll2 = 2;
     static int scroll5 = 5;
-    static int totalNotebook = 12;
+    static int totalNotebook = 170;
 
+    /**
+     * @apiNote Создает список из 170 ноутбуков, которые условно есть в условном магазине.
+     * @return notebookSet собственно, список.
+     */
     public static Set<Notebook> fill() {
         Set<Notebook> notebookSet = new HashSet<>();
         for (int i = 1; i <= totalNotebook; i++) {
@@ -26,24 +29,7 @@ public class NoteCatalog {
                     arrOs[randNumber.nextInt(scroll5)],
                     arrColor[randNumber.nextInt(scroll5)]));
         }
-        System.out.println("Ноутбуки в наличии: ");
-        for (Notebook notebook : notebookSet) {
-            System.out.println(notebook);
-        }
         return notebookSet;
     }
-    /* public static HashMap<String, String[]> arrParams = new HashMap<>();
-
-    public static HashMap<String, String[]> getArrParams() {
-        arrParams.put("Оперативная память", arrRam);
-        arrParams.put("Жестcкий диск", arrDrive);
-        arrParams.put("Размер экрана", arrScreenSize);
-        arrParams.put("Производитель", arrBrand);
-        arrParams.put("Операционная система", arrOs);
-        arrParams.put("Цвет", arrColor);
-        return arrParams;
-    }
-
-     */
 
 }
