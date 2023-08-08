@@ -2,6 +2,7 @@ package org.example.lesson6.cw;
 
 public class Task4 {
         public static void main(String[] args) {
+            Converter converter = new Cels();
             double gradus = -273;
             System.out.println("temp Cels = " + new Cels().convertValue(gradus));
             System.out.println("temp Far = " + new Far().convertValue(gradus));
