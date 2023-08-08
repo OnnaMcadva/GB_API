@@ -4,7 +4,7 @@ public class Task4 {
         public static void main(String[] args) {
             Converter converter = new Cels();
             double gradus = -273;
-            System.out.println("temp Cels = " + new Cels().convertValue(gradus));
+            System.out.println("temp Cels = " + converter.convertValue(gradus));
             System.out.println("temp Far = " + new Far().convertValue(gradus));
             System.out.println("temp Kelv = " + new Kelv().convertValue(gradus));
         }
